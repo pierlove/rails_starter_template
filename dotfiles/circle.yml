@@ -1,0 +1,23 @@
+machine:
+  timezone:
+    America/New_York
+  environment:
+    CC_TEST_REPORTER_ID: #TO DO
+dependencies:
+  pre:
+    - gem install bundler
+  post:
+    - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+    - chmod +x ./cc-test-reporter
+  bundler:
+    without: [production]
+test:
+  pre:
+    - ./cc-test-reporter before-build
+  post:
+    - ./cc-test-reporter after-build --exit-code $?
+deployment:
+  staging:
+    branch: master
+    heroku:
+      appname: # TO DO

@@ -1,0 +1,3 @@
+linters:
+  FinalNewline:
+    present: true

@@ -1,0 +1,21 @@
+<%= form_for(@user, url: yield(:form_url), html: { role: 'form' }) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+
+  <div class="form-group">
+    <%= f.label :email %>
+    <%= f.email_field :email, class: 'form-control', autofocus: true, placeholder: I18n.t('placeholders.email') %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :password %>
+    <%= f.password_field :password, autocomplete: 'off', class: 'form-control', placeholder: yield(:password_text) %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation, autocomplete: 'off', class: 'form-control', placeholder: yield(:password_confirmation_text) %>
+  </div>
+
+  <%= f.submit yield(:submit_text), class: 'btn btn-primary' %>
+
+<% end %>
