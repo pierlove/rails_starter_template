@@ -61,6 +61,7 @@ group :development, :test do
   gem 'binding_of_caller',  '0.7.2'
   gem 'byebug',             '9.1.0', platforms: [:mri, :mingw, :x64_mingw]
   gem 'faker',              '1.8.4'
+  gem 'simplecov',          '0.15.0'
   gem 'sqlite3',            '1.3.13'
 end
 
