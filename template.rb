@@ -34,7 +34,7 @@ end
 
 # Rails
 
-gem 'rails', '5.1.2'
+gem 'rails', '5.1.4'
 
 # Default Rails gems
 
@@ -46,7 +46,7 @@ gem 'uglifier',     '3.2.0'
 
 # Project specific gems
 
-gem 'autoprefixer-rails',       '7.1.2.6'
+gem 'autoprefixer-rails',       '7.1.4'
 gem 'bcrypt',                   '3.1.11'
 gem 'bootstrap-sass',           '3.3.7'
 gem 'font-awesome-rails',       '4.7.0.2'
@@ -59,20 +59,20 @@ gem 'kaminari',                 '1.0.1'
 group :development, :test do
   gem 'better_errors',      '2.3.0'
   gem 'binding_of_caller',  '0.7.2'
-  gem 'byebug',             '9.0.6', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'byebug',             '9.1.0', platforms: [:mri, :mingw, :x64_mingw]
   gem 'faker',              '1.8.4'
   gem 'sqlite3',            '1.3.13'
 end
 
 group :test do
-  gem 'minitest-reporters',         '1.1.14'
+  gem 'minitest-reporters',         '1.1.18'
   gem 'rails-controller-testing',   '1.0.2'
 end
 
 # Production gems
 
 group :production do
-  gem 'passenger',  '5.1.7'
+  gem 'passenger',  '5.1.8'
   gem 'pg',         '0.21.0'
 end
 GEMFILE
