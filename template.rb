@@ -8,7 +8,7 @@ end
 # Create .ruby-version and set default version of Ruby to use
 
 create_file '.ruby-version' do <<-RUBYVERSION
-ruby-2.4.1
+ruby-2.4.2
 RUBYVERSION
 end
 
@@ -24,7 +24,7 @@ end
 remove_file 'Gemfile'
 create_file 'Gemfile' do <<-GEMFILE
 source 'https://rubygems.org'
-ruby '2.4.1'
+ruby '2.4.2'
 # ruby-gemset=#{app_name}
 
 git_source(:github) do |repo_name|
@@ -61,7 +61,7 @@ group :development, :test do
   gem 'binding_of_caller',  '0.7.2'
   gem 'byebug',             '9.1.0', platforms: [:mri, :mingw, :x64_mingw]
   gem 'faker',              '1.8.4'
-  gem 'simplecov',          '0.15.0'
+  gem 'simplecov',          '0.15.1'
   gem 'sqlite3',            '1.3.13'
 end
 
